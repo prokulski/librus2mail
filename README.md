@@ -23,7 +23,7 @@ Konfiguracja zawarta jest w pliku *config.yaml* - znaczenie parametrów:
 * **librus_login_name** - (na przykład) imię dziecka - jak się ma ich więcej to łatwiej rozróżnić niż po numerach kont ;)
 * **read_messages** - czy skrypt ma zbierać treść wiadomości?
   * **UWAGA:** na razie treść wiadomości nie jest nigdzie wykorzystywana, a wejście w wiadomość (skrypt to robi) sprawia, że staje się ona przeczytana. Zalecam ustawienie flagi na *false*
-* **notification_receivers** - lista emaili odbiorców powiadomień
+* **notification_receivers** - lista adresów email odbiorców powiadomień
 * **wait_time_s** - jak długo czekać pomiędzy kolejnymi logowaniami do Librusa?
 
 ### Dodatkowo
