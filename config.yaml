@@ -1,0 +1,8 @@
+librus_login: "ID KONTA RODZICA W LIBRUSIE"
+librus_password: "HASŁO DO KONTA RODZICA"
+librus_login_name: "IMIĘ DZIECKA (DLA UŁATWIENIA)"
+read_messages: false
+notification_receivers:
+  - "matka@mail.com"
+  - "ojciec@mail.com"
+wait_time_s: 3600
