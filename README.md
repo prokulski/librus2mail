@@ -12,7 +12,7 @@ Uruchamia się to cudo przez
 
 `python main.py`
 
-Potrzebny Python 3.8+ (walarus operator <3)
+Potrzebny Python 3.8+ (walrus operator <3)
 
 ## Konfiguracja
 
