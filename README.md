@@ -6,6 +6,14 @@ Jeśli pojawi się nowa wiadomość - wysyła mailem pełną listę wiadomości 
 
 Za wzór komunikacji z Librusem (głównie logowanie) posłużyło [repo](https://github.com/Mati365/librus-api/) [https://github.com/Mati365/librus-api/](https://github.com/Mati365/librus-api/)
 
+## Uruchomienie
+
+Uruchamia się to cudo przez
+
+`python main.py`
+
+Potrzebny Python 3.8+ (walarus operator <3)
+
 ## Konfiguracja
 
 Konfiguracja zawarta jest w pliku *config.yaml* - znaczenie parametrów:
