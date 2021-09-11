@@ -1,8 +1,16 @@
-librus_login: "ID KONTA RODZICA W LIBRUSIE"
-librus_password: "HASŁO DO KONTA RODZICA"
-librus_login_name: "IMIĘ DZIECKA (DLA UŁATWIENIA)"
-read_messages: false
-notification_receivers:
-  - "matka@mail.com"
-  - "ojciec@mail.com"
-wait_time_s: 3600
+librus_users:
+  - librus_login_name: nazwa pierwszego konta
+    librus_login: login do pierwszego konta
+    librus_password: hasło do pierwszego konta
+    read_messages: false
+    notification_receivers:
+      - email pierwszej osoby powiadamianej dla pierwszego konta
+      - email drugiej osoby powiadamianej dla pierwszego konta
+  - librus_login_name: nazwa drugiego konta
+    librus_login: login do drugiego konta
+    librus_password: hasło do drugiego konta
+    read_messages: false
+    notification_receivers:
+      - email pierwszej osoby powiadamianej dla drugiego konta
+      - email drugiej osoby powiadamianej dla drugiego konta
+wait_time_s: [czas oczekiwania w sekundach]
