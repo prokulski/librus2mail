@@ -141,4 +141,4 @@ class Librus():
         messages = sorted(messages, key=lambda m: m['datetime'], reverse=True)
         self.messages = messages
 
-        self.unread_count = sum([1*m['is_unread'] for m in messages])
+        self.unread_count = sum([m['is_unread'] for m in messages])
