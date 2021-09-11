@@ -5,6 +5,7 @@ from base_logger import logger
 def send_mail(config, df):
     contents = f"""
     <p>W Librusie dla konta {config['librus_login']} <strong>({config['librus_login_name']})</strong> pojawiły się <strong>nowe wiadomości</strong>.</p>
+    <p>&nbsp;</p>
     <p>Lista wszystkich wiadomości (nowe <strong>boldem</strong>):</p>
     <table border="1" cellspacing="0" cellpadding="10">
     <thead><tr><th>Tytuł</th><th>Nadawca</th><th>Data</th></tr></thead>
@@ -38,6 +39,6 @@ def send_mail(config, df):
     contents = contents.replace("\n", "")
 
     yag.send(config['notification_receivers'],
-             f"Powiadomienia z Librusa dla konta {config['librus_login']} ({config['librus_login_name']})",
+             f"{config['librus_login_name']} ma nową wiadomość w Librusa (konto {config['librus_login']})",
              contents)
     logger.info("Mail z podsumowaniem wysłany")
