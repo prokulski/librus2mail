@@ -35,8 +35,6 @@ if __name__ == '__main__':
             if checked:
                 # aktualna lista wszystkich wiadomości
                 new_messages = [m['link'] for m in l.messages]
-                print(set(known_msgs[user_config['librus_login']]))
-                print(set(new_messages))
                 if set(known_msgs[user_config['librus_login']]) != set(new_messages):
                     logger.info("Pojawiły się nowe wiadomości")
 
@@ -44,7 +42,7 @@ if __name__ == '__main__':
                     known_msgs[user_config['librus_login']] = new_messages
 
                     # wysyłamy mailowe powiadomienie
-                    send_mail(user_config, l.messages, new_messages)
+                    send_mail(user_config, l.messages)
                 else:
                     logger.info("Brak nowych wiadomości")
 
