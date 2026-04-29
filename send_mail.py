@@ -5,8 +5,7 @@ from base_logger import logger
 
 def send_mail(config, df):
     # na potrzeby wysyłania maili
-    GMAIL_USER = environ.get('GMAIL_USER')
-    GMAIL_PASS = environ.get('GMAIL_PASS')
+    GMAIL_USER = "lukasz@prokulski.science"
 
     # treść maila
     contents = f"""
@@ -19,7 +18,7 @@ def send_mail(config, df):
     """
 
     for r in df:
-        if r['is_unread']:
+        if r["is_unread"]:
             contents += f"""
             <tr>
             <td><strong>{r['title']}</strong></td>
@@ -40,11 +39,13 @@ def send_mail(config, df):
 
     # wyslanie maila
     logger.info("Wysyłam maila z podsumowaniem")
-    yag = yagmail.SMTP(GMAIL_USER, GMAIL_PASS)
+    yag = yagmail.SMTP(GMAIL_USER, oauth2_file="python_yagmail_client.json")
 
     contents = contents.replace("\n", "")
 
-    yag.send(config['notification_receivers'],
-             f"{config['librus_login_name']} ma nową wiadomość w Librusa (konto {config['librus_login']})",
-             contents)
+    yag.send(
+        config["notification_receivers"],
+        f"{config['librus_login_name']} ma nową wiadomość w Librusa (konto {config['librus_login']})",
+        contents,
+    )
     logger.info("Mail z podsumowaniem wysłany")

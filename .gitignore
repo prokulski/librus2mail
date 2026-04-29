@@ -1,3 +1,4 @@
 config.yaml
 librus.log
 __pycache__/**
+python_yagmail_client.json
